@@ -1,0 +1,13 @@
+---
+# tasks file for docker-registry
+- name: Log into DockerHub
+  docker_login:
+    username: wupti123
+    password: rayenoos01
+- name: Push to docker hub
+  docker_image:
+    name: lcimage
+    repository: wupti123/lcrepo
+    tag: latest
+    source: local
+    push: yes
